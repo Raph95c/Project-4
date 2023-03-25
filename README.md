@@ -1,4 +1,8 @@
 # Project-4
+
+ ![avatars-000679259321-r1vmct-t500x500](https://user-images.githubusercontent.com/115199874/227734174-10522e9e-2555-43ef-8a40-e7b024222fd9.jpg)
+
+
 Member:
 - Raphael Tran 
 - David Dixon 
