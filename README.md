@@ -6,15 +6,20 @@
 
 
 
-Member:
+Members:
 - Raphael Tran 
 - David Dixon 
 - Nicholas Dao
 - Patricia Roa 
 
-# Project 
-In this project, a Sport show wants us to predict the next Most Valuable Player of the season by using the nba data from 2010 to now. To accomplish this assignment, we will use machine learning tools, matplotlib, tableau and leaflet. 
+# Research Questions
+1. Who will be the next Most Valuable Player (MVP) for the 2022-2023 NBA Season? 
+2. Which teams have the strongest aggregated statistics? 
 
-# Source 
-- https://www.nbastuffer.com/2022-2023-nba-player-stats/
-- https://www.kaggle.com/datasets/nathanlauga/nba-games/code
+# Project 
+In this project, a Sports show wants us to predict the next MVP of the season by using the NBA data from 2010 to now. To accomplish this assignment, we will be analyzing player statistics using machine learning, Matplotlib, Tableau and Leaflet.js. 
+
+# Data Sources 
+* [2022-2023 NBA Player Stats](https://www.nbastuffer.com/2022-2023-nba-player-stats/)
+* [NBA Player Information](https://basketball.realgm.com/nba/players)
+    
