@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+    
+    
+html,
+body
+{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+.main{
+  width: 100%;
+  background-color:green;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  }
+  .content{
+
+  }
+.title{
+text-align: center;
+font-family: Arial;
+font-size:45px;
+letter-spacing: 1px;
+line-height: 30px;
+color:black;
+
+
+}
+  .intro{
+    text-align: center;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color:black;
+
+  }
