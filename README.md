@@ -13,7 +13,7 @@ Members:
 
 # Research Questions
 1. What is the most popular type of music ?
-2. Using preferences, can we predict playlist for users ?
+2. Using preferences, can we predict specified playlist for users ?
 
 
 # Project 
