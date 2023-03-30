@@ -19,5 +19,5 @@ The purpose of this project is to create an application to recommend Spotify son
 
 
 # Data Sources 
-*[List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
+[List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
     
