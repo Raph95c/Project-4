@@ -46,7 +46,7 @@ def get_song_id(song_name):
     track_search = sp.search(q=f"Artist:{artist} track: {track_name}", type="track", limit=3)
     track_id = track_search['tracks']['items'][0]['id']
     search_result_song_name = track_search['tracks']['items'][0]['name']
-    print(f"is this your song? {search_result_song_name}")
+    print(f"searching for songs like: {search_result_song_name} by {artist}")
 
     return track_id;
 
@@ -93,7 +93,7 @@ def run_kmeans(tracks_df_w_new_song):
 
     return tracks_df_predictions;
 
-#recommends songs based on closest datapoints
+#recommends songs based on closest datapoints, but doesn't take into account for the clustergroup they're in 
 def recommended_songs_id(predictions, song_feature1, song_feature2, track_list):
     feature1 = predictions['danceability']
     feature2 = predictions['energy']
