@@ -133,7 +133,7 @@ def main():
     response_json = response.json()
     access_token = response_json['access_token']
 
-    song_name = str(input("What song do u like? (song by artist)"))
+    song_name = input("What song do u like? (song by artist)")
     track_id = get_song_id(song_name)
     track_features = get_track_features(track_id)
     song_feature1, songfeature2 = track_features['danceability'], track_features['energy']
