@@ -70,7 +70,7 @@ def get_track_features(track_id):
     
     return features;
 
-#adding the features of the new song to the df to prep it for KMeans algorith
+#adding the features of the new song to the df to prep it for KMeans algorithm
 def add_song_to_df(song_features, tracks_df):
     song_features_df = pd.DataFrame(song_features, index=[0])
     new_df = pd.concat([song_features_df, tracks_df])
@@ -86,7 +86,7 @@ def run_kmeans(tracks_df_w_new_song):
     scaled_data = scaler.fit_transform(tracks_df_w_new_song)
     tracks_df_scaled = pd.DataFrame(scaled_data, columns=column_names, index=index)
 
-    k_model = KMeans(n_clusters=4, random_state=1, n_init="auto")
+    k_model = KMeans(n_clusters=4, random_state=1)
     predictions = k_model.fit_predict(tracks_df_scaled)
     tracks_df_predictions = tracks_df_scaled.copy()
     tracks_df_predictions["ClusterGroup"] = predictions
