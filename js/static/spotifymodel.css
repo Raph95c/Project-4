@@ -1,43 +1,98 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-    
-    
+  
+  
 html,
 body
 {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-  }
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
 
 .main{
-  width: 100%;
-  background-color:green;
-  background-position: center;
-  background-size: cover;
-  height: 50vh;
-  }
-  .content{
+width: 100%;
+background: url("../static/images/spotify-background.jpg");
+background-position: center;
+background-size: cover;
+height: 130vh;
+}
 
-  }
-.title{
-text-align: center;
-font-family: Arial;
-font-size:45px;
-letter-spacing: 1px;
-line-height: 30px;
-color:black;
+.menu::after{
+  content:"";
+  clear:both;
+  display:table;
+}
 
+.navbar{
+  width: 1200px;
+  height: 70px;
+}
+
+.icon{
+  float:left;
+}
+
+.logo{
+  color: #fff;
+  font-size: 35px;
+  font-family: Arial;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.names {
+  color: #fff;
+  font-size: 20px;
+  font-family: Arial;
+  padding-left: 20px;
+  padding-top: 10px
 
 }
-  .intro{
-    text-align: center;
-    font-family: Arial;
-    letter-spacing: 1.2px;
-    line-height: 30px;
-    color:black;
 
-  }
+.names li {
+  display: block;
+}
+
+.menu{
+  width: 600px;
+  float: right;
+  height: 99px;
+  position: relative;
+  z-index: 10;
+}
+
+.ul{
+  list-style: none;
+  padding: 1;
+  margin: 0;
+}
+
+ul li{
+ display: inline-block
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 25px 20px;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+ul li a:hover{
+  color: #ff7200;
+}
+
+.content{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  color: #fff;
+  position: center;
+} 
