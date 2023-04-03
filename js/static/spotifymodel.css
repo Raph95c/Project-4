@@ -89,6 +89,17 @@ ul li a:hover{
   color: #ff7200;
 }
 
+.title{
+text-align: center;
+padding-left: 350px;
+    padding-bottom: 25px;
+    padding-top: 100px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color: #fff;
+}
+
 .content{
   width: 100%;
   height: auto;
@@ -96,3 +107,14 @@ ul li a:hover{
   color: #fff;
   position: center;
 } 
+
+.intro{
+  text-align: auto;
+    padding-left: 350px;
+    padding-bottom: 25px;
+    padding-top: 100px;
+    font-family: Arial;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #fff;
+}
