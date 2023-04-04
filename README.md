@@ -35,6 +35,7 @@ The purpose of this project is to create an application to recommend Spotify son
 # Data analysis
 ## Music attributes
 To have a better understanding of our datas, we have only chosen a specific timeline which is from 2010 to 2020. To find out how people listen to their favorite songs, we started to analyze the attributes over the years. 
+
 Before any explanation, let's define the different attributes : 
 - Valence : Spotify uses the word “valence” to measure whether a song is likely to make someone feel happy (higher valence) or sad (lower valence).
 - Instrumentalness : This value represents the amount of vocals in the song. The closer it is to 1.0, the more instrumental the song is.
