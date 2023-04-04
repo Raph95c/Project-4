@@ -116,18 +116,29 @@ def get_song_info(song_id_list):
         song_album = track["album"]["name"]
         print(f"{song_name} by {song_artist}")
 
+# def get_genres(track_id):
+#     genres_list = []
+#     sp = spotipy.Spotify(auth_manager=SpotifyOAuth())
+#     search = sp.track(track_id)
+#     artist_id = search['album']['artists'][0]['id']
+    
+#     artist_search = sp.artist(artist_id)
+#     genres = artist_search['genres']
+#     print(genres)
+
+
 # -------
 #| Main |
 # ------
 def main():
     #setting environment variables for spotipy
     os.environ['SPOTIPY_CLIENT_ID'] = "d8c9d086b1714bbaad9b9d1448817add"
-    os.environ['SPOTIPY_CLIENT_SECRET'] = "f33e37aaf4704ba7941ab2f034ce253a"
+    os.environ['SPOTIPY_CLIENT_SECRET'] = "e6b7f13670bc4fec9b1b591acaa3eb8b"
     os.environ['SPOTIPY_REDIRECT_URI'] = "https://localhost:8888/callback"
 
     #requests an authorization token and saves it as a variable: the SpotifyOAuth accepts token automatically.
     response = requests.post(url="https://accounts.spotify.com/api/token"
-                             ,data="grant_type=client_credentials&client_id=d8c9d086b1714bbaad9b9d1448817add&client_secret=f33e37aaf4704ba7941ab2f034ce253a"
+                             ,data="grant_type=client_credentials&client_id=d8c9d086b1714bbaad9b9d1448817add&client_secret=e6b7f13670bc4fec9b1b591acaa3eb8b"
                              ,headers={"Content-Type": "application/x-www-form-urlencoded"})
     
     response_json = response.json()
@@ -136,14 +147,15 @@ def main():
     song_name = input("What song do u like? (song by artist)")
     track_id = get_song_id(song_name)
     track_features = get_track_features(track_id)
-    song_feature1, songfeature2 = track_features['danceability'], track_features['energy']
+    song_feature1, song_feature2 = track_features['danceability'], track_features['energy']
 
     df_with_user_song = add_song_to_df(track_features, tracks_df)
     predictions_df = run_kmeans(df_with_user_song)
-    song_ids = recommended_songs_id(predictions_df, song_feature1, songfeature2, df_with_user_song)
-    recommended_songs = get_song_info(song_ids)
+    song_ids = recommended_songs_id(predictions_df, song_feature1, song_feature2, df_with_user_song)
+    # recommended_songs = get_song_info(song_ids)
 
     print(song_ids)
+    # print(recommended_songs)
 
 
 
