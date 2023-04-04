@@ -49,6 +49,18 @@ Before any explanation, let's define the different attributes :
 
 ![](https://raw.githubusercontent.com/Raph95c/Project-4/main/images/line_graph.png)
 
+What does the graph tell us ?
+- Loudness and Tempo musics evolved in the same way
+- Energy and Valence are pretty similar 
+- Danceability and Speechiness are more or less close
+
+## Corellation 
+In order to go further in the analysis, we did a correlation visualization :
+
+![image](https://user-images.githubusercontent.com/115199874/229678609-c3907610-5d72-40ae-a0ef-6c4abcaead95.png)
+
+It seems like energy and loudness are highly positively correlated.
+Also, valence is positively correlated with danceability and energy. Considering happy songs make people energetic and want to dance, the correlation make a lot sense. *Interestingly, speechiness and loudness are negatively correlated with each other.
 
 
 # Data Sources 
