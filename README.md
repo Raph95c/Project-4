@@ -59,9 +59,14 @@ In order to go further in the analysis, we did a correlation visualization :
 
 ![image](https://user-images.githubusercontent.com/115199874/229678609-c3907610-5d72-40ae-a0ef-6c4abcaead95.png)
 
-It seems like energy and loudness are highly positively correlated.
-Also, valence is positively correlated with danceability and energy. Considering happy songs make people energetic and want to dance, the correlation make a lot sense. *Interestingly, speechiness and loudness are negatively correlated with each other.
+It seems like Energy and Loudness are highly positively correlated.
+Also, Valence is positively correlated with Danceability and energy. Considering happy songs make people energetic and want to dance, the correlation make a lot sense. *Interestingly, speechiness and loudness are negatively correlated with each other.
 
+### In-depth analysis
+
+![image](https://user-images.githubusercontent.com/115199874/229679875-efb4de27-8ab9-48aa-aa72-becf93dc1271.png)
+
+From the datas above, here a visualization how Energy and Loudness are positively correlated.
 
 # Data Sources 
 [List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
