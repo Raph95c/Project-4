@@ -33,10 +33,8 @@ The purpose of this project is to create an application to recommend Spotify son
 # Machine Learning 
 
 # Data analysis
+## Music attributes
 To have a better understanding of our datas, we have only chosen a specific timeline which is from 2010 to 2020. To find out how people listen to their favorite songs, we started to analyze the attributes over the years. 
-
-![](https://raw.githubusercontent.com/Raph95c/Project-4/main/images/line_graph.png)
-
 Before any explanation, let's define the different attributes : 
 - Valence : Spotify uses the word “valence” to measure whether a song is likely to make someone feel happy (higher valence) or sad (lower valence).
 - Instrumentalness : This value represents the amount of vocals in the song. The closer it is to 1.0, the more instrumental the song is.
@@ -47,6 +45,10 @@ Before any explanation, let's define the different attributes :
 - Danceability : “Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable”.
 - Loudness :  It refers to how loud or soft a sound seems to a listener. The loudness of sound is determined, in turn, by the intensity of the sound waves.
 - Tempo : The overall estimated tempo of a track in beats per minute (BPM)
+
+![](https://raw.githubusercontent.com/Raph95c/Project-4/main/images/line_graph.png)
+
+
 
 # Data Sources 
 [List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
