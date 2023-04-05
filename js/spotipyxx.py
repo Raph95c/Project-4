@@ -108,13 +108,17 @@ def recommended_songs_id(predictions, song_feature1, song_feature2, track_list):
 #gets track_name, artist, and album name with a list of track_ids 
 def get_song_info(song_id_list):
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth())
-    
+    recommended_songs_list = []
     for id in song_id_list:
         track = sp.track(id)
         song_name = track["name"]
         song_artist = track["artists"][0]["name"]
         song_album = track["album"]["name"]
-        print(f"{song_name} by {song_artist}")
+        recommended_song = f"{song_name} by {song_artist}"
+        recommended_songs_list.append(recommended_song)
+        print(recommended_song)
+    
+    return recommended_songs_list
 
 # def get_genres(track_id):
 #     genres_list = []
@@ -127,10 +131,10 @@ def get_song_info(song_id_list):
 #     print(genres)
 
 
-# -------
-#| Main |
-# ------
-def main():
+#+----------------------------------------------------+
+#| Main Function -- returns list of recommended songs |
+#+----------------------------------------------------+
+def recommend_songs(song_name):
     #setting environment variables for spotipy
     os.environ['SPOTIPY_CLIENT_ID'] = "d8c9d086b1714bbaad9b9d1448817add"
     os.environ['SPOTIPY_CLIENT_SECRET'] = "e6b7f13670bc4fec9b1b591acaa3eb8b"
@@ -144,7 +148,7 @@ def main():
     response_json = response.json()
     access_token = response_json['access_token']
 
-    song_name = input("What song do u like? (song by artist)")
+    # song_name = input("What song do u like? (song by artist)")
     track_id = get_song_id(song_name)
     track_features = get_track_features(track_id)
     song_feature1, song_feature2 = track_features['danceability'], track_features['energy']
@@ -157,8 +161,9 @@ def main():
     print(song_ids)
     print(recommended_songs)
 
+    return recommended_songs
 
+songs = recommend_songs("snooze by sza")
+print(songs)
 
-if __name__ == "__main__":
-    main()
 

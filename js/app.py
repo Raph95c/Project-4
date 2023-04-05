@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-import test_script
+import spotipyxx
 
 app = Flask(__name__)
 CORS(app)
@@ -20,10 +20,10 @@ def modelpage():
 @app.route("/process_input", methods=['POST'])
 def process_input():
     input_data = request.form['input']
-    output_data = test_script.input_plus_hello(input_data)
-    print(output_data)
+    recommended_songs = spotipyxx.recommend_songs(input_data)
+    print(recommended_songs)
     
-    return render_template("/modelpage.html", results=output_data)
+    return render_template("/modelpage.html", results=recommended_songs)
 
 @app.route("/charts.html")
 def charts():
