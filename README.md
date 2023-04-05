@@ -80,6 +80,6 @@ From the datas above, here a visualization how Energy and Loudness are positivel
 # Data Sources 
 [List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
 
-[Spotify Web API] (https://developer.spotify.com/documentation/web-api)
+[Spotify Web API](https://developer.spotify.com/documentation/web-api)
 
-[Spotipy Documentation] (https://spotipy.readthedocs.io/en/2.22.1/)
+[Spotipy Documentation](https://spotipy.readthedocs.io/en/2.22.1/)
