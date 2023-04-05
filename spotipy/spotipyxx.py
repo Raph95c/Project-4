@@ -152,10 +152,10 @@ def main():
     df_with_user_song = add_song_to_df(track_features, tracks_df)
     predictions_df = run_kmeans(df_with_user_song)
     song_ids = recommended_songs_id(predictions_df, song_feature1, song_feature2, df_with_user_song)
-    # recommended_songs = get_song_info(song_ids)
+    recommended_songs = get_song_info(song_ids)
 
     print(song_ids)
-    # print(recommended_songs)
+    print(recommended_songs)
 
 
 
