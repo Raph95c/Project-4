@@ -83,7 +83,7 @@ def recommended_songs_id(predictions, song_feature1, song_feature2, track_list):
     feature2 = predictions['energy']
     data_points = np.column_stack([feature1, feature2])
     ckdtree = scipy.spatial.cKDTree(data_points)
-    song_recommendations = ckdtree.query([song_feature1, song_feature2],k=5)[1]
+    song_recommendations = ckdtree.query([song_feature1, song_feature2],k=10)[1]
 
     song_ids = track_list.iloc[song_recommendations,:].index.to_list()
 
