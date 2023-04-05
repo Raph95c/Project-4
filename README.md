@@ -78,6 +78,8 @@ From the datas above, here a visualization how Energy and Loudness are positivel
 
 # Results
 
+# Issues/Things to Improve Upon
+
 
 # Data Sources 
 [List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
