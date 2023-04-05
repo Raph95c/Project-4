@@ -24,20 +24,20 @@
           <li> <a href="/sources.html">Sources</a></li>
       </ul>
       </div>
+<body>
+  
+  <form action="/recommend_songs", method="POST">
+    <label for="input">Enter a Song: ({song_title} by {artist})</label><br>
+    <input type="text" id="input" name="input"><br>
+    <input type="button" value="Submit">
+  </form>
+  
+  <h1>Results: </h1>
+  {% for song in results %}
+  <p>{{ song }}</p>
+  {% endfor %}
+  
+</body>
 
-      <form action="/process_input", method="POST">
-        <label for="input">Enter a Song: ({song_title} by {artist})</label><br>
-        <input type="text" id="input" name="input"><br>
-        <input type="button" value="Submit">
-      </form>
-
-      <h1>Results: </h1>
-      <p>{{ results }} </p>
-      
-          <div class="navbar">
-            <div id="result"></div>
-          </div>
-
-<script src="../static/script.js"></script>
-
+  
 </div>
