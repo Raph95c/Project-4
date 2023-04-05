@@ -68,6 +68,15 @@ Also, Valence is positively correlated with Danceability and energy. Considering
 
 From the datas above, here a visualization how Energy and Loudness are positively correlated.
 
+## What artist do people listen to ?
+
+![image](https://user-images.githubusercontent.com/115199874/229963812-4f369422-6037-4c8f-a15b-12bfb25e4aa0.png)
+
+## What kind of music do people listen to ?
+
+![image](https://user-images.githubusercontent.com/115199874/229966141-ca8f2e5d-3ecd-4e37-acb1-4bd38847912f.png)
+
+
 # Data Sources 
 [List of Songs on Spotify 1921-2020](https://www.kaggle.com/datasets/ektanegi/spotifydata-19212020?resource=download)
     
