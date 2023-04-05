@@ -1,9 +1,10 @@
 function pass_to_python() {
     var input = document.getElementById("input").value;
-    var xhr = XMLHttpRequest();
+    console.log(input); // Print the input value to the console
+
+    var xhr = new XMLHttpRequest();
     xhr.open("POST", "/recommend_songs");
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify({"input":input}));
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -14,4 +15,6 @@ function pass_to_python() {
             document.getElementById("result").innerHTML = response.processed_data;
         }
     };
+
+    xhr.send(JSON.stringify({"input":input}));
 }

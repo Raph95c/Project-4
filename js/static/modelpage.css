@@ -61,13 +61,13 @@
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
-    color: #fff;
+    color: #1118de;
     }
 
     .input-header{
       margin: 0 0 0 10px;
       padding: 0;
-      color:#fff;
+      color:#1118de;
       font-size: 30px;
 
     }
@@ -88,9 +88,9 @@
     background-color: #38d875;
     padding: 20px;
     width: 200px;
-    color: #ffffff;
+    color: #1118de;
     text-align: center;
-    border: 4px double #cccccc; /* add this line */
+    border: 4px double #1118de; /* add this line */
     border-radius: 10px; /* add this line */
     font-size: 28px; /* add this line */
     }
