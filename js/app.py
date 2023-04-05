@@ -17,11 +17,10 @@ def Kmeans():
 def modelpage():
     return render_template("modelpage.html")
 
-@app.route("/process_input", methods=['POST'])
+@app.route("/recommend_songs", methods=['POST'])
 def process_input():
     input_data = request.form['input']
     recommended_songs = spotipyxx.recommend_songs(input_data)
-    print(recommended_songs)
     
     return render_template("/modelpage.html", results=recommended_songs)
 
