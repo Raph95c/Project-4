@@ -17,6 +17,13 @@ def Kmeans():
 def modelpage():
     return render_template("modelpage.html")
 
+@app.route("/process_input", methods=['POST'])
+def process_input():
+    input_data = request.form['input']
+    output_data = test_script.input_plus_hello(input_data)
+    print(output_data)
+    
+    return render_template("/modelpage.html", results=output_data)
 
 @app.route("/charts.html")
 def charts():
@@ -25,18 +32,6 @@ def charts():
 @app.route("/sources.html")
 def sources():
     return render_template("sources.html")
-
-
-# @app.route("/recommend_songs", methods=['POST'])
-# def recommend_songs():
-    
-#     user_song = request.json['input']
-#     print(f"Received input: {user_song}") 
-
-#     output_data = test_script(user_song)
-#     print(f"Processed data: {output_data}")
-
-#     return output_data
 
 
 if __name__ == '__main__':
