@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+ 
+  .main {
+    display: group;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+  }
+
+
+    .main {
+      display: block;
+      font-size: 80%;
+    }
+    p {
+      position: relative;
+      margin: 1rem 0 2rem 1rem;
+      background: rgba(white, 0.8);
+
+      padding: 20px;
+      margin: 30px;
+      
+      /* other styling */
+      background-color: #73ab84;
+      border-radius: 10px;
+      color: white;
+      font-family: Avenir;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    h6 {
+        padding: 20px;
+        margin: 30px;
+        text-align: center;
+      
+        font-size: 30px;
+          /* other styling */
+          background-color: #000501;
+          border-radius: 10px;
+          color: white;
+          font-family: Avenir;
+      
+      
+      
+      }
+/* header for the those in home page*/
+h2{
+    font-size: 30px;
+}
+/**/
