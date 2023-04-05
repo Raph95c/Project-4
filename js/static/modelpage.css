@@ -73,7 +73,8 @@
     }
 
     .box{
-      size: 80px;
+      height:200px;
+      font-size:14pt;
       position: absolute;
       top: 50%;
       left: 50%;
