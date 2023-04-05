@@ -54,7 +54,7 @@ What does the graph tell us ?
 - Energy and Valence are pretty similar 
 - Danceability and Speechiness are more or less close
 
-## Corellation 
+## Correlation 
 In order to go further in the analysis, we did a correlation visualization :
 
 ![image](https://user-images.githubusercontent.com/115199874/229678609-c3907610-5d72-40ae-a0ef-6c4abcaead95.png)
@@ -75,6 +75,8 @@ From the datas above, here a visualization how Energy and Loudness are positivel
 ## What kind of music do people listen to ?
 
 ![image](https://user-images.githubusercontent.com/115199874/229966141-ca8f2e5d-3ecd-4e37-acb1-4bd38847912f.png)
+
+## Results
 
 
 # Data Sources 
