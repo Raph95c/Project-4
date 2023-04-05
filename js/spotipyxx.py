@@ -63,19 +63,26 @@ def add_song_to_df(song_features, tracks_df):
     return new_df
 
 #runs kmeans with user song in it
-def run_kmeans(tracks_df_w_new_song):
+def run_kmeans(tracks_df_w_new_song, track_id):
+    #preprocessing dataframe
     column_names = tracks_df_w_new_song.columns
     index = tracks_df_w_new_song.index
     scaler = StandardScaler()
     scaled_data = scaler.fit_transform(tracks_df_w_new_song)
     tracks_df_scaled = pd.DataFrame(scaled_data, columns=column_names, index=index)
 
+    #running kmeans algorithm
     k_model = KMeans(n_clusters=4, random_state=1)
     predictions = k_model.fit_predict(tracks_df_scaled)
     tracks_df_predictions = tracks_df_scaled.copy()
     tracks_df_predictions["ClusterGroup"] = predictions
 
-    return tracks_df_predictions
+    #now isolates data points by the cluster group of the user's song
+    user_song = tracks_df_predictions.loc[track_id]
+    cluster_group_number = int(user_song['ClusterGroup'])
+    user_song_cluster_group = tracks_df_predictions[tracks_df_predictions['ClusterGroup'] == cluster_group_number]
+
+    return user_song_cluster_group
 
 #recommends songs based on closest datapoints, but doesn't take into account for the clustergroup they're in 
 def recommended_songs_id(predictions, song_feature1, song_feature2, track_list):
@@ -136,12 +143,10 @@ def recommend_songs(song_name):
     song_feature1, song_feature2 = track_features['danceability'], track_features['energy']
 
     df_with_user_song = add_song_to_df(track_features, tracks_df)
-    predictions_df = run_kmeans(df_with_user_song)
+    predictions_df = run_kmeans(df_with_user_song, track_id)
     song_ids = recommended_songs_id(predictions_df, song_feature1, song_feature2, df_with_user_song)
     recommended_songs = get_song_info(song_ids)
-
     print(song_ids)
-    print(recommended_songs)
 
     return recommended_songs
 
