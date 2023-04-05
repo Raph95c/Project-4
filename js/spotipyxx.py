@@ -1,6 +1,6 @@
-# =---------------------=
+# +---------------------+
 # | Importing Depencies |
-# =---------------------=
+# +---------------------+
 import os
 import requests
 import spotipy
@@ -23,22 +23,6 @@ tracks_df = pd.read_csv(path)
 column_names = tracks_df.columns
 index = tracks_df.index
 
-#creates playlist and adds tracks to it
-def create_playlist():
-    scope = ["playlist-modify-public", "playlist-modify-private"]
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
-    playlist = sp.user_playlist_create(user="ndao99", name="Recommended Songs", public=False, description="This is a test")
-
-    playlist_id = playlist['id']
-    add_track(playlist_id)
-
-#adds tracks to playlist
-def add_track(playlist):
-    scope = ["playlist-modify-public", "playlist-modify-private"]
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
-
-    sp.playlist_add_items(playlist_id=playlist)
-
 #gets the id of a track, given its name
 def get_song_id(song_name):
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth())
@@ -48,7 +32,7 @@ def get_song_id(song_name):
     search_result_song_name = track_search['tracks']['items'][0]['name']
     print(f"searching for songs like: {search_result_song_name} by {artist}")
 
-    return track_id;
+    return track_id
 
 #accepts the track_id and returns our target features
 def get_track_features(track_id):
@@ -68,7 +52,7 @@ def get_track_features(track_id):
                 ,"energy":energy, "instrumentalness":instrumentalness, "liveness":liveness, "loudness":loudness
                 , "speechiness":speechiness, "tempo":tempo, "valence":valence}
     
-    return features;
+    return features
 
 #adding the features of the new song to the df to prep it for KMeans algorithm
 def add_song_to_df(song_features, tracks_df):
@@ -76,7 +60,7 @@ def add_song_to_df(song_features, tracks_df):
     new_df = pd.concat([song_features_df, tracks_df])
     new_df = new_df.set_index(['id'])
     
-    return new_df;
+    return new_df
 
 #runs kmeans with user song in it
 def run_kmeans(tracks_df_w_new_song):
@@ -91,7 +75,7 @@ def run_kmeans(tracks_df_w_new_song):
     tracks_df_predictions = tracks_df_scaled.copy()
     tracks_df_predictions["ClusterGroup"] = predictions
 
-    return tracks_df_predictions;
+    return tracks_df_predictions
 
 #recommends songs based on closest datapoints, but doesn't take into account for the clustergroup they're in 
 def recommended_songs_id(predictions, song_feature1, song_feature2, track_list):
@@ -103,7 +87,7 @@ def recommended_songs_id(predictions, song_feature1, song_feature2, track_list):
 
     song_ids = track_list.iloc[song_recommendations,:].index.to_list()
 
-    return song_ids;
+    return song_ids
 
 #gets track_name, artist, and album name with a list of track_ids 
 def get_song_info(song_id_list):
@@ -116,7 +100,6 @@ def get_song_info(song_id_list):
         song_album = track["album"]["name"]
         recommended_song = f"{song_name} by {song_artist}"
         recommended_songs_list.append(recommended_song)
-        print(recommended_song)
     
     return recommended_songs_list
 
@@ -128,7 +111,7 @@ def get_song_info(song_id_list):
     
 #     artist_search = sp.artist(artist_id)
 #     genres = artist_search['genres']
-#     print(genres)
+
 
 
 #+----------------------------------------------------+
@@ -148,7 +131,6 @@ def recommend_songs(song_name):
     response_json = response.json()
     access_token = response_json['access_token']
 
-    # song_name = input("What song do u like? (song by artist)")
     track_id = get_song_id(song_name)
     track_features = get_track_features(track_id)
     song_feature1, song_feature2 = track_features['danceability'], track_features['energy']
@@ -163,7 +145,11 @@ def recommend_songs(song_name):
 
     return recommended_songs
 
-songs = recommend_songs("snooze by sza")
-print(songs)
+#if you're running just this script, you need to pass in a song name to recommend_songs in this format 
+# {song_name} by {artist_name}
+
+
+# songs = recommend_songs("snooze by sza")
+# print(songs)
 
 
