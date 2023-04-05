@@ -21,6 +21,38 @@
     height: 200vh;
     }
 
+    .menu{
+      width: 600px;
+      float: right;
+      height: 99px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .ul{
+      list-style: none;
+      padding: 1;
+      margin: 0;
+    }
+    
+    ul li{
+     display: inline-block
+    }
+    
+    ul li a{
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      padding: 25px 20px;
+      font-family: Arial;
+      font-weight: bold;
+      transition: 0.2s ease-in-out;
+    }
+    
+    ul li a:hover{
+      color: green;
+    }
+
 .title{
     text-align: center;
     padding-left: 250px;
@@ -32,3 +64,32 @@
     color: #fff;
     }
 
+    .input-header{
+      margin: 0 0 0 10px;
+      padding: 0;
+      color:#fff;
+      font-size: 30px;
+
+    }
+
+    .box{
+      size: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: (-50%,-50%);
+
+
+    }
+
+    .button{
+    display: inline-block;
+    background-color: #38d875;
+    padding: 20px;
+    width: 200px;
+    color: #ffffff;
+    text-align: center;
+    border: 4px double #cccccc; /* add this line */
+    border-radius: 10px; /* add this line */
+    font-size: 28px; /* add this line */
+    }
