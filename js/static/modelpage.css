@@ -13,13 +13,13 @@
     margin: 0 auto;
   }
 
-  .main{
+  /* .main{
     width: 100%;
     background: url("../static/images/spotify-background.jpg");
     background-position: center;
     background-size: cover;
     height: 200vh;
-    }
+    } */
 
     .menu{
       width: 600px;
@@ -41,7 +41,7 @@
     
     ul li a{
       text-decoration: none;
-      color: #fff;
+      color: #040404;
       display: block;
       padding: 25px 20px;
       font-family: Arial;
@@ -73,7 +73,8 @@
     }
 
     .box{
-      size: 80px;
+      height:200px;
+      font-size:14pt;
       position: absolute;
       top: 50%;
       left: 50%;
