@@ -33,7 +33,7 @@ body {
       font-size: 20px;
       font-weight: 300;
     }
-    h6 {
+    h3 {
         padding: 20px;
         margin: 30px;
         text-align: center;
@@ -44,6 +44,7 @@ body {
           border-radius: 10px;
           color: white;
           font-family: Avenir;
+          text-align: center;
       
       
       
