@@ -13,13 +13,17 @@
     margin: 0 auto;
   }
 
-  /* .main{
+  h1, p, label {
+    color: white;
+  }
+
+  .main{
     width: 100%;
     background: url("../static/images/spotify-background.jpg");
     background-position: center;
     background-size: cover;
     height: 200vh;
-    } */
+    }
 
     .menu{
       width: 600px;
@@ -41,7 +45,7 @@
     
     ul li a{
       text-decoration: none;
-      color: #040404;
+      color: #ffffff;
       display: block;
       padding: 25px 20px;
       font-family: Arial;
@@ -61,7 +65,7 @@
     font-family: Arial;
     letter-spacing: 1.2px;
     line-height: 30px;
-    color: #1118de;
+    color: #ffffff;
     }
 
     .input-header{
