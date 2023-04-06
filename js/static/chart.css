@@ -13,7 +13,6 @@ body {
     font: 500 100%/1.5 system-ui;
   }
 
-
     .main {
       display: block;
       font-size: 80%;
@@ -27,14 +26,14 @@ body {
       margin: 30px;
       
       /* other styling */
-      background-color: #73ab84;
+      background-color: #8FBC8F;
       border-radius: 10px;
       color: white;
       font-family: Avenir;
       font-size: 20px;
       font-weight: 300;
     }
-    h6 {
+    h3 {
         padding: 20px;
         margin: 30px;
         text-align: center;
@@ -45,6 +44,7 @@ body {
           border-radius: 10px;
           color: white;
           font-family: Avenir;
+          text-align: center;
       
       
       
