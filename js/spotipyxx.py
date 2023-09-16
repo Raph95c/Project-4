@@ -126,8 +126,8 @@ def get_song_info(song_id_list):
 #+----------------------------------------------------+
 def recommend_songs(song_name):
     #setting environment variables for spotipy
-    os.environ['SPOTIPY_CLIENT_ID'] = "d8c9d086b1714bbaad9b9d1448817add"
-    os.environ['SPOTIPY_CLIENT_SECRET'] = "e6b7f13670bc4fec9b1b591acaa3eb8b"
+    os.environ['SPOTIPY_CLIENT_ID'] = "000000000000"
+    os.environ['SPOTIPY_CLIENT_SECRET'] = "keep it a secret"
     os.environ['SPOTIPY_REDIRECT_URI'] = "https://localhost:8888/callback"
 
     #requests an authorization token and saves it as a variable: the SpotifyOAuth accepts token automatically.
